@@ -1,0 +1,16 @@
+flask
+langchain
+langchain-postgres
+transformers
+langchain-core
+langchain-openai
+python-dotenv
+numpy
+psycopg
+torch
+plotly
+psycopg2
+pandas
+scikit-learn
+langchain-community
+rank_bm25

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal público de busca semântica de competências acadêmicas e empresariais: pesquisadores, grupos de pesquisa e empresas." />
+    <meta name="theme-color" content="#0b1730" />
+    <link rel="icon" href="/static/img/favicon-uneb.png" type="image/png" />
+    <title>Observatório de Competências</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+    <div class="app" id="app">
+      <header class="topbar">
+        <button type="button" class="icon-btn nav-toggle" id="nav-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Abrir menu">
+          <span data-icon="menu"></span>
+        </button>
+
+        <a class="brand" href="#/" aria-label="Observatório de Competências — página inicial">
+          <span class="brand__mark" data-icon="network"></span>
+          <span class="brand__text">
+            <strong>Observatório</strong>
+            <small>De dados públicos abertos</small>
+          </span>
+        </a>
+
+        <form class="global-search" id="global-search" role="search" autocomplete="off">
+          <label class="sr-only" for="global-query">Buscar competências</label>
+          <span class="global-search__icon" data-icon="search"></span>
+          <input id="global-query" name="q" type="search" placeholder="Busque por área, tema ou competência…" />
+          <button type="submit" class="btn btn--primary">Buscar</button>
+        </form>
+      </header>
+
+      <nav class="sidebar" id="sidebar" aria-label="Navegação principal">
+        <ul class="sidebar__list">
+          <li><a class="nav-link" href="#/" data-nav="home"><span data-icon="home"></span>Início</a></li>
+          <li><a class="nav-link" href="#/busca" data-nav="search"><span data-icon="search"></span>Busca</a></li>
+          
+<li class="sidebar__group" id="entities-nav-group">
+  <div class="sidebar__group-heading">
+    <a
+      class="nav-link"
+      href="#/entidades"
+      data-nav="entities"
+    >
+      <span class="nav-link__icon" aria-hidden="true">
+        <i data-lucide="layers"></i>
+      </span>
+      <span>Entidades</span>
+    </a>
+
+    <button
+      class="sidebar__expand"
+      id="entities-nav-toggle"
+      type="button"
+      aria-label="Mostrar ou esconder tipos de entidades"
+      aria-expanded="true"
+      aria-controls="entities-nav-sublist"
+    >
+      <i data-lucide="chevron-down" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <ul class="sidebar__sublist" id="entities-nav-sublist">
+    <li>
+      <a class="nav-link" href="#/entidades/pesquisadores" data-nav="researchers">
+        <span class="nav-link__icon" aria-hidden="true">
+          <i data-lucide="user"></i>
+        </span>
+        <span>Pesquisadores</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-link" href="#/entidades/grupos" data-nav="groups">
+        <span class="nav-link__icon" aria-hidden="true">
+          <i data-lucide="users"></i>
+        </span>
+        <span>Grupos de Pesquisa</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-link" href="#/entidades/empresas" data-nav="companies">
+        <span class="nav-link__icon" aria-hidden="true">
+          <i data-lucide="building"></i>
+        </span>
+        <span>Empresas</span>
+      </a>
+    </li>
+  </ul>
+</li>
+
+          <li><a class="nav-link" href="#/areas" data-nav="areas"><span data-icon="grid"></span>Áreas do conhecimento</a></li>
+          <li><a class="nav-link" href="#/visao-geral" data-nav="overview"><span data-icon="chart"></span>Visão geral</a></li>
+        </ul>
+
+        <div class="sidebar__foot">
+          <p class="sidebar__label">Sobre o projeto</p>
+          <a class="nav-link nav-link--small" href="https://saberaberto.uneb.br/items/935d4371-77b2-4b20-8672-144f5bcfc633" target="_blank" rel="noopener noreferrer">
+            <span data-icon="book"></span>Trabalho completo<span class="nav-link__ext" data-icon="external"></span>
+          </a>
+          <a class="nav-link nav-link--small" href="https://github.com/gleidson-ramos/TCC-competence-semantic" target="_blank" rel="noopener noreferrer">
+            <span data-icon="code"></span>Código-fonte<span class="nav-link__ext" data-icon="external"></span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="scrim" id="scrim"></div>
+
+      <main class="main" id="main" tabindex="-1">
+        <div class="view" id="view"></div>
+
+        <footer class="site-footer">
+          <p>
+            Perfis de pesquisadores e grupos têm origem em fontes públicas enquanto as informações de empresas são fictícias, geradas por inteligência artificial.
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <div id="live" class="sr-only" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/static/js/main.js"></script>
+  </body>
+</html>
